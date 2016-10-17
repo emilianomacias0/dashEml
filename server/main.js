@@ -1,5 +1,15 @@
-import { Meteor } from 'meteor/meteor';
 
-Meteor.startup(() => {
-  // code to run on server at startup
-});
+
+
+	// var emi = Accounts.createUser({
+ //    profile: {
+ //      name: 'Emiliano Macias'
+ //    },
+ //    username: "macias",
+ //    email: "macias@mail.com",
+ //    password: "macias",
+ //  });
+// var em = Meteor.users.findOne({username: 'macias'})._id;
+// Roles.addUserToRoles( em,  ["admin"] );
+
+

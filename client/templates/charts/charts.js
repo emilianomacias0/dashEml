@@ -104,227 +104,54 @@ var elemento = document.getElementById('chart2');
 var myChart = echarts.init(elemento);  
 	 var idx = 1;
 option = {
-    timeline : {
-        data : [
-            '2013-01-01', '2013-02-01', '2013-03-01', '2013-04-01', '2013-05-01',
-            { name:'2013-06-01', symbol:'emptyStar6', symbolSize:8 },
-            '2013-07-01', '2013-08-01', '2013-09-01', '2013-10-01', '2013-11-01',
-            { name:'2013-12-01', symbol:'star6', symbolSize:8 }
-        ]
+    title : {
+        text: 'Ingresos Semanales',
+        subtext: 'Abril',
+        x:'center'
     },
-    options : [
-        {
-            title : {
-                text: '浏览器占比变化',
-                subtext: '纯属虚构'
-            },
-            tooltip : {
-                trigger: 'item',
-                formatter: "{a} <br/>{b} : {c} ({d}%)"
-            },
-            legend: {
-                data:['Chrome','Firefox','Safari','IE9+','IE8-']
-            },
-            toolbox: {
-                show : true,
-                feature : {
-                    mark : {show: true},
-                    dataView : {show: true, readOnly: false},
-                    magicType : {
-                        show: true, 
-                        type: ['pie', 'funnel'],
-                        option: {
-                            funnel: {
-                                x: '25%',
-                                width: '50%',
-                                funnelAlign: 'left',
-                                max: 1700
-                            }
-                        }
-                    },
-                    restore : {show: true},
-                    saveAsImage : {show: true}
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient : 'vertical',
+        x : 'left',
+        data:['Lunes','Martes','Miercoles','Jueves','Viernes']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {
+                show: true, 
+                type: ['pie', 'funnel'],
+                option: {
+                    funnel: {
+                        x: '25%',
+                        width: '50%',
+                        funnelAlign: 'left',
+                        max: 1548
+                    }
                 }
             },
-            series : [
-                {
-                    name:'浏览器（数据纯属虚构）',
-                    type:'pie',
-                    center: ['50%', '45%'],
-                    radius: '50%',
-                    data:[
-                        {value: idx * 128 + 80,  name:'Chrome'},
-                        {value: idx * 64  + 160,  name:'Firefox'},
-                        {value: idx * 32  + 320,  name:'Safari'},
-                        {value: idx * 16  + 640,  name:'IE9+'},
-                        {value: idx++ * 8  + 1280, name:'IE8-'}
-                    ]
-                }
-            ]
-        },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    series : [
         {
-            series : [
-                {
-                    name:'浏览器（数据纯属虚构）',
-                    type:'pie',
-                    data:[
-                        {value: idx * 128 + 80,  name:'Chrome'},
-                        {value: idx * 64  + 160,  name:'Firefox'},
-                        {value: idx * 32  + 320,  name:'Safari'},
-                        {value: idx * 16  + 640,  name:'IE9+'},
-                        {value: idx++ * 8  + 1280, name:'IE8-'}
-                    ]
-                }
-            ]
-        },
-        {
-            series : [
-                {
-                    name:'浏览器（数据纯属虚构）',
-                    type:'pie',
-                    data:[
-                        {value: idx * 128 + 80,  name:'Chrome'},
-                        {value: idx * 64  + 160,  name:'Firefox'},
-                        {value: idx * 32  + 320,  name:'Safari'},
-                        {value: idx * 16  + 640,  name:'IE9+'},
-                        {value: idx++ * 8  + 1280, name:'IE8-'}
-                    ]
-                }
-            ]
-        },
-        {
-            series : [
-                {
-                    name:'浏览器（数据纯属虚构）',
-                    type:'pie',
-                    data:[
-                        {value: idx * 128 + 80,  name:'Chrome'},
-                        {value: idx * 64  + 160,  name:'Firefox'},
-                        {value: idx * 32  + 320,  name:'Safari'},
-                        {value: idx * 16  + 640,  name:'IE9+'},
-                        {value: idx++ * 8  + 1280, name:'IE8-'}
-                    ]
-                }
-            ]
-        },
-        {
-            series : [
-                {
-                    name:'浏览器（数据纯属虚构）',
-                    type:'pie',
-                    data:[
-                        {value: idx * 128 + 80,  name:'Chrome'},
-                        {value: idx * 64  + 160,  name:'Firefox'},
-                        {value: idx * 32  + 320,  name:'Safari'},
-                        {value: idx * 16  + 640,  name:'IE9+'},
-                        {value: idx++ * 8  + 1280, name:'IE8-'}
-                    ]
-                }
-            ]
-        },
-        {
-            series : [
-                {
-                    name:'浏览器（数据纯属虚构）',
-                    type:'pie',
-                    data:[
-                        {value: idx * 128 + 80,  name:'Chrome'},
-                        {value: idx * 64  + 160,  name:'Firefox'},
-                        {value: idx * 32  + 320,  name:'Safari'},
-                        {value: idx * 16  + 640,  name:'IE9+'},
-                        {value: idx++ * 8  + 1280, name:'IE8-'}
-                    ]
-                }
-            ]
-        },
-        {
-            series : [
-                {
-                    name:'浏览器（数据纯属虚构）',
-                    type:'pie',
-                    data:[
-                        {value: idx * 128 + 80,  name:'Chrome'},
-                        {value: idx * 64  + 160,  name:'Firefox'},
-                        {value: idx * 32  + 320,  name:'Safari'},
-                        {value: idx * 16  + 640,  name:'IE9+'},
-                        {value: idx++ * 8  + 1280, name:'IE8-'}
-                    ]
-                }
-            ]
-        },
-        {
-            series : [
-                {
-                    name:'浏览器（数据纯属虚构）',
-                    type:'pie',
-                    data:[
-                        {value: idx * 128 + 80,  name:'Chrome'},
-                        {value: idx * 64  + 160,  name:'Firefox'},
-                        {value: idx * 32  + 320,  name:'Safari'},
-                        {value: idx * 16  + 640,  name:'IE9+'},
-                        {value: idx++ * 8  + 1280, name:'IE8-'}
-                    ]
-                }
-            ]
-        },
-        {
-            series : [
-                {
-                    name:'浏览器（数据纯属虚构）',
-                    type:'pie',
-                    data:[
-                        {value: idx * 128 + 80,  name:'Chrome'},
-                        {value: idx * 64  + 160,  name:'Firefox'},
-                        {value: idx * 32  + 320,  name:'Safari'},
-                        {value: idx * 16  + 640,  name:'IE9+'},
-                        {value: idx++ * 8  + 1280, name:'IE8-'}
-                    ]
-                }
-            ]
-        },
-        {
-            series : [
-                {
-                    name:'浏览器（数据纯属虚构）',
-                    type:'pie',
-                    data:[
-                        {value: idx * 128 + 80,  name:'Chrome'},
-                        {value: idx * 64  + 160,  name:'Firefox'},
-                        {value: idx * 32  + 320,  name:'Safari'},
-                        {value: idx * 16  + 640,  name:'IE9+'},
-                        {value: idx++ * 8  + 1280, name:'IE8-'}
-                    ]
-                }
-            ]
-        },
-        {
-            series : [
-                {
-                    name:'浏览器（数据纯属虚构）',
-                    type:'pie',
-                    data:[
-                        {value: idx * 128 + 80,  name:'Chrome'},
-                        {value: idx * 64  + 160,  name:'Firefox'},
-                        {value: idx * 32  + 320,  name:'Safari'},
-                        {value: idx * 16  + 640,  name:'IE9+'},
-                        {value: idx++ * 8  + 1280, name:'IE8-'}
-                    ]
-                }
-            ]
-        },
-        {
-            series : [
-                {
-                    name:'浏览器（数据纯属虚构）',
-                    type:'pie',
-                    data:[
-                        {value: idx * 128 + 80,  name:'Chrome'},
-                        {value: idx * 64  + 160,  name:'Firefox'},
-                        {value: idx * 32  + 320,  name:'Safari'},
-                        {value: idx * 16  + 640,  name:'IE9+'},
-                        {value: idx++ * 8  + 1280, name:'IE8-'}
-                    ]
-                }
+            name:'Ventas al dia',
+            type:'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:[
+                {value:335, name:'Lunes'},
+                {value:310, name:'Martes'},
+                {value:234, name:'Miercoles'},
+                {value:135, name:'Jueves'},
+                {value:1548, name:'Viernes'}
             ]
         }
     ]
@@ -342,14 +169,13 @@ var elemento = document.getElementById('chart3');
 var myChart = echarts.init(elemento);  
 	 option = {
     title : {
-        text: '未来一周气温变化',
-        subtext: '纯属虚构'
+        text: 'Los cambios de temperatura próxima semana',
     },
     tooltip : {
         trigger: 'axis'
     },
     legend: {
-        data:['最高气温','最低气温']
+        data:['temperatura más alta','La temperatura mínima']
     },
     toolbox: {
         show : true,
@@ -366,7 +192,7 @@ var myChart = echarts.init(elemento);
         {
             type : 'category',
             boundaryGap : false,
-            data : ['周一','周二','周三','周四','周五','周六','周日']
+            data : ['Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo']
         }
     ],
     yAxis : [
@@ -379,23 +205,23 @@ var myChart = echarts.init(elemento);
     ],
     series : [
         {
-            name:'最高气温',
+            name:'temperatura más alta',
             type:'line',
             data:[11, 11, 15, 13, 12, 13, 10],
             markPoint : {
                 data : [
-                    {type : 'max', name: '最大值'},
-                    {type : 'min', name: '最小值'}
+                    {type : 'max', name: 'Maxima'},
+                    {type : 'min', name: 'Minima'}
                 ]
             },
             markLine : {
                 data : [
-                    {type : 'average', name: '平均值'}
+                    {type : 'average', name: 'Promedio'}
                 ]
             }
         },
         {
-            name:'最低气温',
+            name:'La temperatura mínima',
             type:'line',
             data:[1, -2, 2, 5, 3, 2, 0],
             markPoint : {
@@ -405,7 +231,7 @@ var myChart = echarts.init(elemento);
             },
             markLine : {
                 data : [
-                    {type : 'average', name : '平均值'}
+                    {type : 'average', name : 'Promedio'}
                 ]
             }
         }
