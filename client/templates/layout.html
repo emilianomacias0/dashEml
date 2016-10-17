@@ -1,6 +1,11 @@
 <template name="main">
-{{>navbar}}
-    {{> yield}}
+	{{>navbar}}
+	{{> sidenav}}
+  
+</template>
+
+<template name="inicio">
+	  {{> yield}}
     <hr />
-    <p>Copyright &copy; 2014-2015.</p>
+    <p style="text-align:center;position:fixed;bottom:0;">Copyright &copy; 2014-2015.</p>
 </template>
