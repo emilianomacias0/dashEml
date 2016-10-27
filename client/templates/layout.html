@@ -1,6 +1,8 @@
 <template name="main">
 	{{>navbar}}
+	{{# if currentUser}}
     {{> sidenav}} 
+    {{/if}}
   	
 	
   
@@ -10,5 +12,5 @@
 	  {{> yield}}
     <hr />
     <p style="text-align:center;position:fixed;bottom:0;">Copyright &copy; 2014-2015.</p>
-    
+
 </template>
