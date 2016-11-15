@@ -2,27 +2,32 @@
 
 
 
-
-  if (Meteor.users.find({
-  //Crea el usuario admin 
-    }).count() == 0) {
-  
-    try{
-      var userId = Accounts.createUser({
+if (Meteor.users.find().count() == 0) {
+  try{
+ Accounts.createUser({
     profile: {
-      name: 'Administrador'
+      name: 'Emiliano Macias'
     },
     username: "admin",
-    email: "admin@mail.com",
-    password: "admin",
+    email: "macias@mail.com",
+    password: "macias",
   });
-  }catch(e){
 
-  }finally{
-     var em = Meteor.users.findOne({username: 'admin'})._id;
-    Roles.addUserToRoles( em,  ["admin"] );
-  }
-   console.log('Se agrego cuenta de administrador admin@mail.com/admin');
-   }
+
+}
+catch(e){
+  console.log(e);
+}finally{
+ var adminId  = Meteor.users.findOne({profile:{name: 'Emiliano Macias'}})._id;
+Roles.setUserRoles( adminId ,  ["admin"] );
+console.log("Se creo el usuario " + adminId);
+}
+
+
+
+
+}
+
+
 
 
